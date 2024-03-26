@@ -3,39 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="gusta1708.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="30"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="20"/>
+        <RowDefinition Height="30"/>
+    </Grid.RowDefinitions>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="100"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="100"/>
+    </Grid.ColumnDefinitions>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+    <Image Source="bicho.png"
+           Aspect="Fill"
+           Grid.RowSpan="4"
+           Grid.ColumnSpan="3"/>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+    <ProgressBar ProgressColor="Red"
+                 Width="200"       
+                 Background="red"     
+                 Grid.Row="0"
+                 Grid.Column="1"/>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+    <Frame BorderColor="Black"
+           HeightRequest="50"
+           CornerRadius="30"
+           BackgroundColor="#f0ca9d"
+           Grid.Row="2"
+           Grid.Column="1"/>
 
-        </VerticalStackLayout>
-    </ScrollView>
+       
 
+
+
+   
+
+
+
+    </Grid>
 </ContentPage>
