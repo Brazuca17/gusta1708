@@ -1,4 +1,6 @@
-﻿namespace gusta1708;
+﻿using Microsoft.Extensions.DependencyInjection;
+
+namespace gusta1708;
 
 public partial class MainPage : ContentPage
 {
@@ -15,6 +17,11 @@ public partial class MainPage : ContentPage
 
 		Imgdosbicho.Source = atual.GetNomedafoto();
 
+        ProgressoFome.Progress = atual.GetFome();
+
+		ProgressoSede.Progress = atual.GetSede();
+
+		ProgressoBrinca.Progress = atual.GetBrinca();
 
 	}
 

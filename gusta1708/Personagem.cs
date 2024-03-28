@@ -12,7 +12,7 @@ protected string Nomedafoto;
 
 public Personagem()
 {
-    Nomedafoto="nada";
+    Nomedafoto="n-ada";
 }
 
  
@@ -43,16 +43,18 @@ public double GetSede()
     return Sede;
 }
 
+public double GetBrinca()
+  {
+    return Brinca;
+  }
+
 public void SetBrinca(double B)
 {
     Brinca=B;
 }
 
-public double Getfome()
-{
-    return Brinca;
-}
 
+ 
 
 
 }
