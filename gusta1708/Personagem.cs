@@ -2,20 +2,25 @@ namespace gusta1708;
 
 public class Personagem
 {
-protected double Fome;
+public double Fome;
 
-protected double Sede;
+public double Sede;
 
-protected double Brinca;
+public double Brinca;
 
- public Personagem()
+protected string Nomedafoto;
+
+public Personagem()
 {
- Fome=1;
-
- Sede=1;
-
- Brinca=1;
+    Nomedafoto="nada";
 }
+
+ 
+public string GetNomedafoto()
+{
+    return Nomedafoto;
+}
+
 
 public void SetFome(double F)
 {
@@ -47,6 +52,8 @@ public double Getfome()
 {
     return Brinca;
 }
+
+
 
 }
 

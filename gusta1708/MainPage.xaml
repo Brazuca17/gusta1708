@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="gusta1708.MainPage">
+             x:Class="gusta1708.MainPage"
+             Shell.NavBarIsVisible="False">
 
     <Grid>
     <Grid.RowDefinitions>
-        <RowDefinition Height="30"/>
+        <RowDefinition Height="40"/>
         <RowDefinition Height="*"/>
         <RowDefinition Height="20"/>
         <RowDefinition Height="30"/>
@@ -17,10 +18,29 @@
         <ColumnDefinition Width="100"/>
     </Grid.ColumnDefinitions>
 
-    <Image Source="bicho.png"
+    <Image x:Name="Imgdosbicho"
            Aspect="Fill"
            Grid.RowSpan="4"
            Grid.ColumnSpan="3"/>
+
+
+    <Frame BorderColor="Black"
+           HeightRequest="50"
+           BackgroundColor="#f0ca9d"
+           Grid.Row="0"
+           Grid.ColumnSpan="3"/>       
+
+    <ProgressBar ProgressColor="Red"
+                 Width="200"       
+                 Background="red"     
+                 Grid.Row="0"
+                 Grid.Column="1"/>
+
+    <ProgressBar ProgressColor="Red"
+                 Width="200"       
+                 Background="red"     
+                 Grid.Row="0"
+                 Grid.Column="1"/>
 
     <ProgressBar ProgressColor="Red"
                  Width="200"       
