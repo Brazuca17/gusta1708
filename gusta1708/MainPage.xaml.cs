@@ -12,13 +12,22 @@ public partial class MainPage : ContentPage
 
 	MeninoNey neymar = new MeninoNey();
 
+	Praia praia = new Praia();
+
+	Europa europa = new Europa();
+
+
 
 
 	public MainPage()
 	{
 		InitializeComponent();
 
-        atual = neymar;
+        atual = josefina;
+
+		atualfundo = Praia
+
+		Imagedofundo.Source = atualfundo.GetNomedaFotoFundo();
 
 		Imgdosbicho.Source = atual.GetNomedafoto();
 
@@ -30,6 +39,33 @@ public partial class MainPage : ContentPage
 
 	}
 
+     void TrocaPronagem(object sender, eventArgs args)
+	{
+	   if(atual = josefina)
+	   { 
+		  atual = neymar;
+	   }
+	   else if(atual = neymar)
+	   { 
+		 atual = bicho;
+	   }
+	   else 
+	   {
+		 atual = josefina
+	   }
+	}
+
+	 void TrocaFundo(object sender, eventArgs args)
+	 {
+		if(atualfundo = praia)
+		{
+		   atualfundo = europa
+		}
+		else if(atualfundo = europa)
+        {
+			atualfundo = praia
+		}
+	 }
 
 
 	

@@ -50,29 +50,44 @@
 
 
        <Frame    BackgroundColor="#ffab8f"
-                 CornerRadius="20"
+                 CornerRadius="20" 
                  Grid.Row="4"
                  Grid.ColumnSpan="5">
 
-              <Image Source="pizza.png"
-                     Grid.Row="4"
-                     Grid.Column="1"/>
+              <Button Source="pizza.png"
+                      Clicked=""
+                      Grid.Row="4"
+                      Grid.Column="1"/>
 
 
-              <Image Source="Agua.png" 
-                     Grid.Row="4"
-                     Grid.Column="2"/>
+              <Button Source="Agua.png" 
+                      Grid.Row="4"
+                      Grid.Column="2"/>
 
-              <Image Source="bola.png"
-                     Grid.Row="4"
-                     Grid.column="3"/>    
+              <Button Source="bola.png"
+                      Grid.Row="4"
+                      Grid.column="3"/>    
        </Frame>  
-      
-           
 
+               <Button Source="seta.png"
+                       Clicked="TrocaPronagem"
+                       HeightRequest="50"
+                       CornerRadius="25"
+                       BackgroundColor="#ffab8f"
+                       Grid.Row="4"
+                       Grid.Column="4"/>
 
+               <Button Source="seta.png"
+                       Clicked="TrocaFundo"
+                       HeightRequest="50"
+                       CornerRadius="25"
+                       BackgroundColor="#ffab8f"
+                       Grid.Row="4"
+                       Grid.Column="0"/>
 
-  
+                       
 
+                  
+ 
          </Grid>
 </ContentPage>
