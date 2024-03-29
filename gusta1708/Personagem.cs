@@ -12,7 +12,7 @@ protected string Nomedafoto;
 
 public Personagem()
 {
-    Nomedafoto="n-ada";
+    Nomedafoto="nada";
 }
 
  

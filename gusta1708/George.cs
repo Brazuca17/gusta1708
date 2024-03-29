@@ -5,10 +5,10 @@ public class George:Personagem
 
 public George() : base()
 {
-    Nomedafoto="bicho.png";
-    Fome = 1;
-    Sede = 1;
-    Brinca = 1;
+    Nomedafoto="george.png";
+    Fome =0.9;
+    Sede = 0.8;
+    Brinca = 0.6;
 }
 
 }

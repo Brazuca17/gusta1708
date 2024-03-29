@@ -8,12 +8,17 @@ public partial class MainPage : ContentPage
      
 	George bicho = new George();
 	
+	Josefina Josefina = new Josefina();
+
+	MeninoNey neymar = new MeninoNey();
+
+
 
 	public MainPage()
 	{
 		InitializeComponent();
 
-        atual = bicho;
+        atual = neymar;
 
 		Imgdosbicho.Source = atual.GetNomedafoto();
 

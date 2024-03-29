@@ -4,35 +4,75 @@
              x:Class="gusta1708.MainPage"
              Shell.NavBarIsVisible="False">
 
-    
+         <Grid>
+       <Grid.RowDefinition>
+          <RowDefinition Height="60"/>
+          <RowDefinition Height="60"/>
+          <RowDefinition Height="60"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="60"/>
+       <RowDefinition Height="60"/>
+         </Grid.RowDefinition>
 
-<VerticalStackLayout>
-    
+       <Grid.columnDefinition>
+          <columnDefinition Width="60">
+          <columnDefinition Width="60">
+          <columnDefinition Width="60">
+          <columnDefinition Width="60">
+          <columnDefinition Width="60">
+       </Grid.columnDefinition>
+
        <Image x:Name="Imgdosbicho"
-              Aspect="Fill"/>
+                 Grid.RowSpan="6"
+                 Grid.ColumnSpan="5"/>
+  
+       <Frame    BackgroundColor="#ffab8f"
+                 CornerRadius="20"
+                 Grid.ColumnSpan="5"
+                 Grid.RowSpan="3">
+
+              <ProgressBar x:Name="ProgressoFome"
+                           ProgressColor="Red"
+                           Grid.Row="0"
+                           Grid.ColumnSpan="5"/>
+
+              <ProgressBar x:Name="ProgressoSede"
+                           ProgressColor="Red"
+                           Grid.Row="1"
+                           Grid.ColumnSpan="5"//>
+
+              <ProgressBar x:Name="ProgressoBrinca"
+                           ProgressColor="Red"
+                           Grid.Row="2"
+                           Grid.ColumnSpan="5"//>           
+
+       </Frame>     
 
 
-       <Frame BorderColor="Black"
-              HeightRequest="100"
-              CornerRadius="10"
-              BackgroundColor="Gray"
-              HorizontalOptions="Center"
-              VerticalOptions="End"/>
+       <Frame    BackgroundColor="#ffab8f"
+                 CornerRadius="20"
+                 Grid.Row="4"
+                 Grid.ColumnSpan="5">
 
-       <ProgressBar x:Name="ProgressoFome"
-                    ProgressColor="Red"/> 
-
-
-       <ProgressBar x:Name="ProgressoSede"
-                    ProgressColor="Red"/>   
-
-       <ProgressBar x:Name="ProgressoBrinca"
-                    ProgressColor="Red"/>        
+              <Image Source="pizza.png"
+                     Grid.Row="4"
+                     Grid.Column="1"/>
 
 
+              <Image Source="Agua.png" 
+                     Grid.Row="4"
+                     Grid.Column="2"/>
+
+              <Image Source="bola.png"
+                     Grid.Row="4"
+                     Grid.column="3"/>    
+       </Frame>  
+      
+           
 
 
 
+  
 
-</VerticalStackLayout>
+         </Grid>
 </ContentPage>
