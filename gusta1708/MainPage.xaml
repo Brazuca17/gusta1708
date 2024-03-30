@@ -11,7 +11,7 @@
           <RowDefinition Height="60"/>
           <RowDefinition Height="*"/>
           <RowDefinition Height="60"/>
-       <RowDefinition Height="60"/>
+          <RowDefinition Height="60"/>
          </Grid.RowDefinition>
 
        <Grid.columnDefinition>
@@ -22,49 +22,69 @@
           <columnDefinition Width="60">
        </Grid.columnDefinition>
 
+       <Image x:Name="TrocaImageFundo"
+              Grid.RowSpam=6
+              Grid.ColumnSpan="5"/>
+              
+
        <Image x:Name="Imgdosbicho"
-                 Grid.RowSpan="6"
-                 Grid.ColumnSpan="5"/>
+              Grid.Row="3"
+              Grid.ColumnSpan="5"/>
   
-       <Frame    BackgroundColor="#ffab8f"
+       <Frame    BackgroundColor="#3a3eba"
                  CornerRadius="20"
+                 WidthRequest="200"
+                 Opacity=".6"
+                 BorderThickness="2" 
+                 BorderColor="Black"
                  Grid.ColumnSpan="5"
                  Grid.RowSpan="3">
 
               <ProgressBar x:Name="ProgressoFome"
-                           ProgressColor="Red"
+                           ProgressColor="#d13646"
+                           Width="100"
+                           Height="20"
                            Grid.Row="0"
                            Grid.ColumnSpan="5"/>
 
               <ProgressBar x:Name="ProgressoSede"
-                           ProgressColor="Red"
+                           ProgressColor="#42ddfc"
+                           Width="100"
+                           Height="20"
                            Grid.Row="1"
-                           Grid.ColumnSpan="5"//>
+                           Grid.ColumnSpan="5"/>
 
               <ProgressBar x:Name="ProgressoBrinca"
-                           ProgressColor="Red"
+                           ProgressColor="#303332"
+                           Width="100"
+                           Height="20"
                            Grid.Row="2"
-                           Grid.ColumnSpan="5"//>           
+                           Grid.ColumnSpan="5"/>           
 
        </Frame>     
 
 
-       <Frame    BackgroundColor="#ffab8f"
-                 CornerRadius="20" 
+       <Frame    BackgroundColor="#3a3eba"
+                 CornerRadius="20"
+                 WidthRequest="200"
+                 BorderThickness="2" 
+                 BorderColor="Black"
                  Grid.Row="4"
                  Grid.ColumnSpan="5">
 
               <Button Source="pizza.png"
-                      Clicked=""
+                      Clicked="AumentaFome"
                       Grid.Row="4"
                       Grid.Column="1"/>
 
 
-              <Button Source="Agua.png" 
+              <Button Source="Agua.png"
+                      Clicked="AumentaSede" 
                       Grid.Row="4"
                       Grid.Column="2"/>
 
               <Button Source="bola.png"
+                      Clicked="AumentaBrinca"
                       Grid.Row="4"
                       Grid.column="3"/>    
        </Frame>  

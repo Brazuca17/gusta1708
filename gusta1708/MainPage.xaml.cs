@@ -76,6 +76,56 @@ public partial class MainPage : ContentPage
 		}
 	 }
 
+	 public AumentaFome(object sender, eventArgs args)
+	 {
+		if(ProgressoFome = 0.0 && >=0.9)
+		{
+		   ProgressoFome + 0.1;
+		}
+		else if(ProgressoFome = 1)
+		{
+			ProgressoFome = 1;
+		}
+		else 
+		{
+			ProgressoFome = 0.0;
+		}
+	 }
+
+	 public AumentaSede(object sender, eventArgs args)
+	 {
+		if(ProgressoSede = 0.0 && >=0.9)
+		{
+			ProgressoSede + 0.1;
+		}
+		else if(ProgressoSede = 1)
+		{
+			ProgressoSede = 1;
+		}
+		else
+		{
+         ProgressoSede = 0;
+		}
+	 }
+
+	 public AumentaBrinca(object sender, eventArgs args)
+	 {
+       if(ProgressoBrinca = 0.0 && >= 0.9)
+	   {
+		 ProgressoBrinca + 0.1;
+	   }      
+	   else if(ProgressoBrinca = 1)
+	   {
+		ProgressoBrinca = 1;
+	   }
+	   else
+	   {
+		ProgressoBrinca = 0.0;
+	   }
+
+
+	 }
+
 	
 }
 
