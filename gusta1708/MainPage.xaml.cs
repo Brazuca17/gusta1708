@@ -4,7 +4,7 @@ namespace gusta1708;
 
 public partial class MainPage : ContentPage
 {
-	 Personagem atual;
+	Personagem atual;
      
 	George bicho = new George();
 	
@@ -12,10 +12,8 @@ public partial class MainPage : ContentPage
 
 	MeninoNey neymar = new MeninoNey();
 
-	Praia praia = new Praia();
-
-	Europa europa = new Europa();
-
+	List<FundoImage> Fundo = new List<FundoImage>();
+	FundoImage FundoImageAtual
 
 
 
@@ -25,9 +23,7 @@ public partial class MainPage : ContentPage
 
         atual = josefina;
 
-		atualfundo = Praia
-
-		Imagedofundo.Source = atualfundo.GetNomedaFotoFundo();
+		id = 0
 
 		Imgdosbicho.Source = atual.GetNomedafoto();
 
@@ -37,7 +33,22 @@ public partial class MainPage : ContentPage
 
 		ProgressoBrinca.Progress = atual.GetBrinca();
 
+		fundo.Add(new FundoImage()
+		{
+          id = 0
+		  
+		  Image Source = "praia.png"
+		});
+
+		fundo.Add(new FundoImage()
+		{
+          id = 1
+
+		  Image Source = "europa.png"
+		})
+
 	}
+
 
      void TrocaPronagem(object sender, eventArgs args)
 	{
@@ -55,18 +66,17 @@ public partial class MainPage : ContentPage
 	   }
 	}
 
-	 void TrocaFundo(object sender, eventArgs args)
+
+     void TrocaImageFundo(object sender, eventArgs args)
 	 {
-		if(atualfundo = praia)
+		if(id = 0  )
+		var proximofundo = FundoImageAtual.id + 1;
+
+		else if(id = 1)
 		{
-		   atualfundo = europa
-		}
-		else if(atualfundo = europa)
-        {
-			atualfundo = praia
+		   var proximofundo = FundoImageAtual.id - 1;
 		}
 	 }
-
 
 	
 }
