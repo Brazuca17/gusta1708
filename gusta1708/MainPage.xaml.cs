@@ -23,7 +23,7 @@ public partial class MainPage : ContentPage
 
         atual = josefina;
 
-		id = 0
+		atualid = 0
 
 		Imgdosbicho.Source = atual.GetNomedafoto();
 
@@ -35,17 +35,15 @@ public partial class MainPage : ContentPage
 
 		fundo.Add(new FundoImage()
 		{
-          id = 0
-		  
-		  Image Source = "praia.png"
+          id = 0,
+		  Image.Source = "praia.png",
 		});
 
 		fundo.Add(new FundoImage()
 		{
-          id = 1
-
-		  Image Source = "europa.png"
-		})
+          id = 1,
+		  Image.Source = "europa.png",
+		});
 
 	}
 
@@ -62,17 +60,17 @@ public partial class MainPage : ContentPage
 	   }
 	   else 
 	   {
-		 atual = josefina
+		 atual = josefina;
 	   }
 	}
 
 
      void TrocaImageFundo(object sender, eventArgs args)
 	 {
-		if(id = 0  )
+		if(atualid = 0)
 		var proximofundo = FundoImageAtual.id + 1;
 
-		else if(id = 1)
+		else if(atualid = 1)
 		{
 		   var proximofundo = FundoImageAtual.id - 1;
 		}

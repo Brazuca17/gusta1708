@@ -77,8 +77,8 @@
                        Grid.Row="4"
                        Grid.Column="4"/>
 
-               <Button Source="seta.png"
-                       Clicked="TrocaFundo"
+               <Button Source="setaesquerda.png"
+                       Clicked="TrocaImageFundo"
                        HeightRequest="50"
                        CornerRadius="25"
                        BackgroundColor="#ffab8f"
@@ -86,8 +86,5 @@
                        Grid.Column="0"/>
 
                        
-
-                  
- 
          </Grid>
 </ContentPage>
