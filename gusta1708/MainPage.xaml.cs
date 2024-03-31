@@ -47,6 +47,7 @@ public partial class MainPage : ContentPage
 
 	}
 
+ //------------------------------------------------------------------------------------------------
 
      void TrocaPronagem(object sender, eventArgs args)
 	{
@@ -64,17 +65,20 @@ public partial class MainPage : ContentPage
 	   }
 	}
 
+ //------------------------------------------------------------------------------------------------
 
      void TrocaImageFundo(object sender, eventArgs args)
 	 {
 		if(atualid = 0)
-		var proximofundo = FundoImageAtual.id + 1;
+		 proximofundo = FundoImageAtual.id + 1;
 
 		else if(atualid = 1)
 		{
-		   var proximofundo = FundoImageAtual.id - 1;
+		    proximofundo = FundoImageAtual.id - 1;
 		}
 	 }
+
+//------------------------------------------------------------------------------------------------
 
 	 public AumentaFome(object sender, eventArgs args)
 	 {
@@ -92,6 +96,8 @@ public partial class MainPage : ContentPage
 		}
 	 }
 
+//------------------------------------------------------------------------------------------------
+
 	 public AumentaSede(object sender, eventArgs args)
 	 {
 		if(ProgressoSede = 0.0 && >=0.9)
@@ -108,6 +114,8 @@ public partial class MainPage : ContentPage
 		}
 	 }
 
+//------------------------------------------------------------------------------------------------
+
 	 public AumentaBrinca(object sender, eventArgs args)
 	 {
        if(ProgressoBrinca = 0.0 && >= 0.9)
@@ -122,10 +130,9 @@ public partial class MainPage : ContentPage
 	   {
 		ProgressoBrinca = 0.0;
 	   }
-
-
 	 }
 
+ //------------------------------------------------------------------------------------------------
 	
 }
 

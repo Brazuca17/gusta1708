@@ -40,6 +40,18 @@
                  Grid.ColumnSpan="5"
                  Grid.RowSpan="3">
 
+              <Image Source="pizza.png"
+                     Grid.Row="0"
+                     Grid.Column="0"/>
+
+              <Image Source="agua.png"
+                     Grid.Row="1"
+                     Grid.Column="0"/>
+
+               <Image Source="bola.png"
+                      Grid.Row="2"
+                      Grid.Column="0"/>
+                            
               <ProgressBar x:Name="ProgressoFome"
                            ProgressColor="#d13646"
                            Width="100"
