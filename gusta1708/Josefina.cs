@@ -3,7 +3,7 @@ namespace gusta1708;
 public class Josefina:Personagem
 {
 
-public josefina() : base()
+public Josefina() : base()
 {
     Nomedafoto="josefina.png";
     Fome = 0.7;

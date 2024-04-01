@@ -4,41 +4,40 @@
              x:Class="gusta1708.MainPage"
              Shell.NavBarIsVisible="False">
 
-         <Grid>
-       <Grid.RowDefinition>
-          <RowDefinition Height="60"/>
-          <RowDefinition Height="60"/>
-          <RowDefinition Height="60"/>
+    <Grid>
+       <Grid.RowDefinitions>
           <RowDefinition Height="*"/>
-          <RowDefinition Height="60"/>
-          <RowDefinition Height="60"/>
-         </Grid.RowDefinition>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="20"/>
+       </Grid.RowDefinitions>
 
-       <Grid.columnDefinition>
-          <columnDefinition Width="60">
-          <columnDefinition Width="60">
-          <columnDefinition Width="60">
-          <columnDefinition Width="60">
-          <columnDefinition Width="60">
-       </Grid.columnDefinition>
+       <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
 
-       <Image x:Name="TrocaImageFundo"
-              Grid.RowSpam=6
+       <Image x:Name="imgfundo"
+              Aspect="AspectFill"
+              Grid.RowSpan="6"
               Grid.ColumnSpan="5"/>
               
 
        <Image x:Name="Imgdosbicho"
-              Grid.Row="3"
+              Grid.RowSpan="6"
               Grid.ColumnSpan="5"/>
   
        <Frame    BackgroundColor="#3a3eba"
                  CornerRadius="20"
-                 WidthRequest="200"
-                 Opacity=".6"
-                 BorderThickness="2" 
+                
                  BorderColor="Black"
                  Grid.ColumnSpan="5"
-                 Grid.RowSpan="3">
+                 Grid.Row="0">
 
               <Image Source="pizza.png"
                      Grid.Row="0"
@@ -57,60 +56,46 @@
                            Width="100"
                            Height="20"
                            Grid.Row="0"
-                           Grid.ColumnSpan="5"/>
+                           Grid.Column="1"
+                           Grid.ColumnSpan="4"/>
 
               <ProgressBar x:Name="ProgressoSede"
                            ProgressColor="#42ddfc"
                            Width="100"
                            Height="20"
                            Grid.Row="1"
-                           Grid.ColumnSpan="5"/>
+                           Grid.Column="1"
+                           Grid.ColumnSpan="4"/>
 
               <ProgressBar x:Name="ProgressoBrinca"
                            ProgressColor="#303332"
                            Width="100"
                            Height="20"
                            Grid.Row="2"
-                           Grid.ColumnSpan="5"/>           
+                           Grid.Column="1"
+                           Grid.ColumnSpan="4"/>           
 
        </Frame>     
 
 
        <Frame    BackgroundColor="#3a3eba"
                  CornerRadius="20"
-                 WidthRequest="200"
-                 BorderThickness="2" 
                  BorderColor="Black"
                  Grid.Row="4"
                  Grid.ColumnSpan="5">
 
-              <Button Source="pizza.png"
-                      Clicked="AumentaFome"
-                      Grid.Row="4"
-                      Grid.Column="1"/>
-
-
-              <Button Source="Agua.png"
-                      Clicked="AumentaSede" 
-                      Grid.Row="4"
-                      Grid.Column="2"/>
-
-              <Button Source="bola.png"
-                      Clicked="AumentaBrinca"
-                      Grid.Row="4"
-                      Grid.column="3"/>    
+                 
        </Frame>  
 
-               <Button Source="seta.png"
-                       Clicked="TrocaPronagem"
+               <ImageButton Source="seta.png" 
                        HeightRequest="50"
                        CornerRadius="25"
                        BackgroundColor="#ffab8f"
                        Grid.Row="4"
                        Grid.Column="4"/>
 
-               <Button Source="setaesquerda.png"
-                       Clicked="TrocaImageFundo"
+               <ImageButton Source="setaesquerda.png"
+                       
                        HeightRequest="50"
                        CornerRadius="25"
                        BackgroundColor="#ffab8f"

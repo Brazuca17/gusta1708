@@ -8,13 +8,12 @@ public partial class MainPage : ContentPage
      
 	George bicho = new George();
 	
-	Josefina Josefina = new Josefina();
+	Josefina josefina = new Josefina();
 
 	MeninoNey neymar = new MeninoNey();
 
-	List<FundoImage> Fundo = new List<FundoImage>();
-	FundoImage FundoImageAtual
-
+	List<String> Fundo = new List<String>();
+	
 
 
 	public MainPage()
@@ -22,8 +21,6 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 
         atual = josefina;
-
-		atualid = 0
 
 		Imgdosbicho.Source = atual.GetNomedafoto();
 
@@ -33,29 +30,24 @@ public partial class MainPage : ContentPage
 
 		ProgressoBrinca.Progress = atual.GetBrinca();
 
-		fundo.Add(new FundoImage()
-		{
-          id = 0,
-		  Image.Source = "praia.png",
-		});
+		
 
-		fundo.Add(new FundoImage()
-		{
-          id = 1,
-		  Image.Source = "europa.png",
-		});
+	    Fundo.Add("praia.png");
 
+		Fundo.Add("europa.png");
+	
+imgfundo.Source = Fundo[0];
 	}
 
  //------------------------------------------------------------------------------------------------
 
-     void TrocaPronagem(object sender, eventArgs args)
+     void TrocaPronagem(object sender, EventArgs args)
 	{
-	   if(atual = josefina)
+	   if(atual == josefina)
 	   { 
 		  atual = neymar;
 	   }
-	   else if(atual = neymar)
+	   else if(atual == neymar)
 	   { 
 		 atual = bicho;
 	   }
@@ -67,70 +59,10 @@ public partial class MainPage : ContentPage
 
  //------------------------------------------------------------------------------------------------
 
-     void TrocaImageFundo(object sender, eventArgs args)
-	 {
-		if(atualid = 0)
-		 proximofundo = FundoImageAtual.id + 1;
-
-		else if(atualid = 1)
-		{
-		    proximofundo = FundoImageAtual.id - 1;
-		}
-	 }
-
+   
+	
 //------------------------------------------------------------------------------------------------
 
-	 public AumentaFome(object sender, eventArgs args)
-	 {
-		if(ProgressoFome = 0.0 && >=0.9)
-		{
-		   ProgressoFome + 0.1;
-		}
-		else if(ProgressoFome = 1)
-		{
-			ProgressoFome = 1;
-		}
-		else 
-		{
-			ProgressoFome = 0.0;
-		}
-	 }
-
-//------------------------------------------------------------------------------------------------
-
-	 public AumentaSede(object sender, eventArgs args)
-	 {
-		if(ProgressoSede = 0.0 && >=0.9)
-		{
-			ProgressoSede + 0.1;
-		}
-		else if(ProgressoSede = 1)
-		{
-			ProgressoSede = 1;
-		}
-		else
-		{
-         ProgressoSede = 0;
-		}
-	 }
-
-//------------------------------------------------------------------------------------------------
-
-	 public AumentaBrinca(object sender, eventArgs args)
-	 {
-       if(ProgressoBrinca = 0.0 && >= 0.9)
-	   {
-		 ProgressoBrinca + 0.1;
-	   }      
-	   else if(ProgressoBrinca = 1)
-	   {
-		ProgressoBrinca = 1;
-	   }
-	   else
-	   {
-		ProgressoBrinca = 0.0;
-	   }
-	 }
 
  //------------------------------------------------------------------------------------------------
 	
