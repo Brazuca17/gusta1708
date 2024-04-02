@@ -36,12 +36,12 @@ public partial class MainPage : ContentPage
 
 		Fundo.Add("europa.png");
 	
-imgfundo.Source = Fundo[0];
+		imgfundo.Source = Fundo[0];
 	}
 
  //------------------------------------------------------------------------------------------------
 
-     void TrocaPronagem(object sender, EventArgs args)
+     void TrocaPersonagem(object sender, EventArgs args)
 	{
 	   if(atual == josefina)
 	   { 
@@ -58,13 +58,33 @@ imgfundo.Source = Fundo[0];
 	}
 
  //------------------------------------------------------------------------------------------------
-
+  
+  void AumentaFome(object sender, EventArgs args)
+   {
+      atual.SetFome(atual.GetFome() + 0.1);
+ 
+      ProgressoFome.Progress = atual.GetFome();
+   }
    
-	
+    
 //------------------------------------------------------------------------------------------------
+  void AumentaSede(object sender, EventArgs args)
+  {
+      atual.SetSede(atual.GetSede() + 0.1);
 
+      ProgressoSede.Progress = atual.GetSede();
+  }
+  
 
  //------------------------------------------------------------------------------------------------
-	
+    
+    void AumentaBrinca(object sender, EventArgs args)
+    {
+        atual.SetBrinca(atual.GetBrinca() + 0.1);
+
+        ProgressoBrinca.Progress = atual.GetBrinca();
+    }
+
+
 }
 

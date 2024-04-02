@@ -6,20 +6,20 @@
 
     <Grid>
        <Grid.RowDefinitions>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="20"/>
+          <RowDefinition Height="70"/> <!-- primeira linha  -->
+          <RowDefinition Height="70"/> <!-- segunda linha  -->
+          <RowDefinition Height="70"/> <!-- terceira linha  -->
+          <RowDefinition Height="*"/> <!-- quarta linha  -->
+          <RowDefinition Height="50"/> <!--  quinta linha  -->
+          <RowDefinition Height="20"/> <!-- sexta linha  -->
        </Grid.RowDefinitions>
 
        <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="*"/>
-          <ColumnDefinition Width="*"/>
-          <ColumnDefinition Width="*"/>
-          <ColumnDefinition Width="*"/>
-          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/> <!-- pirmeira coluna  -->
+          <ColumnDefinition Width="*"/> <!-- segunda coluna   -->
+          <ColumnDefinition Width="*"/> <!-- terceira coluna  -->
+          <ColumnDefinition Width="*"/> <!-- quarta coluna -->
+          <ColumnDefinition Width="*"/> <!-- quinta coluna  -->
        </Grid.ColumnDefinitions>
 
        <Image x:Name="imgfundo"
@@ -34,10 +34,24 @@
   
        <Frame    BackgroundColor="#3a3eba"
                  CornerRadius="20"
-                
                  BorderColor="Black"
                  Grid.ColumnSpan="5"
-                 Grid.Row="0">
+                 Grid.Row="0"
+                 Grid.RowSpan="3">
+<Grid>
+<Grid.RowDefinitions>
+          <RowDefinition Height="40"/> 
+          <RowDefinition Height="40"/> 
+          <RowDefinition Height="40"/> 
+       </Grid.RowDefinitions>
+
+       <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="40"/> 
+          <ColumnDefinition Width="*"/> 
+</Grid.ColumnDefinitions> 
+               
+
+                 
 
               <Image Source="pizza.png"
                      Grid.Row="0"
@@ -73,34 +87,57 @@
                            Height="20"
                            Grid.Row="2"
                            Grid.Column="1"
-                           Grid.ColumnSpan="4"/>           
+                           Grid.ColumnSpan="4"/>   
+</Grid>        
 
        </Frame>     
 
 
        <Frame    BackgroundColor="#3a3eba"
                  CornerRadius="20"
+                 Padding="5"
                  BorderColor="Black"
                  Grid.Row="4"
-                 Grid.ColumnSpan="5">
+                 Grid.Column="1"
+                 Grid.ColumnSpan="3">
 
-                 
+
+<Grid>
+
+<Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/> 
+          <ColumnDefinition Width="*"/> 
+          <ColumnDefinition Width="*"/> 
+          <ColumnDefinition Width="*"/> 
+</Grid.ColumnDefinitions>                  
+
+       <ImageButton Source="pizza.png"
+                    BackgroundColor="#3a3eba"
+                    Grid.Column="0"
+                    Grid.Row="0"/>
+
+       <ImageButton Source="agua.png"
+                     BackgroundColor="#3a3eba"
+                    Grid.Column="1"
+                    Grid.Row="0"/>
+
+       <ImageButton Source="bola.png"
+                     BackgroundColor="#3a3eba"
+                    Grid.Column="2"
+                    Grid.Row="0"/>
+
+       <ImageButton Source="seta.png"
+                     BackgroundColor="#3a3eba"
+                    Clicked="TrocaPersonagem"
+                    Grid.Column="3"
+                    Grid.Row="0"/>
+
+</Grid> 
        </Frame>  
 
-               <ImageButton Source="seta.png" 
-                       HeightRequest="50"
-                       CornerRadius="25"
-                       BackgroundColor="#ffab8f"
-                       Grid.Row="4"
-                       Grid.Column="4"/>
+               
 
-               <ImageButton Source="setaesquerda.png"
                        
-                       HeightRequest="50"
-                       CornerRadius="25"
-                       BackgroundColor="#ffab8f"
-                       Grid.Row="4"
-                       Grid.Column="0"/>
 
                        
          </Grid>
