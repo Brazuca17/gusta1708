@@ -6,7 +6,7 @@
 
     <Grid>
        <Grid.RowDefinitions>
-          <RowDefinition Height="70"/> <!-- primeira linha  -->
+          <RowDefinition Height="50"/> <!-- primeira linha  -->
           <RowDefinition Height="70"/> <!-- segunda linha  -->
           <RowDefinition Height="70"/> <!-- terceira linha  -->
           <RowDefinition Height="*"/> <!-- quarta linha  -->
@@ -32,8 +32,11 @@
               Grid.RowSpan="6"
               Grid.ColumnSpan="5"/>
   
-       <Frame    BackgroundColor="#3a3eba"
+       <Frame    BackgroundColor="#93c9c9"
+                 Opacity=".6"
                  CornerRadius="20"
+                 HeightRequest="160"
+                 WidthRequest="450"
                  BorderColor="Black"
                  Grid.ColumnSpan="5"
                  Grid.Row="0"
@@ -82,7 +85,7 @@
                            Grid.ColumnSpan="4"/>
 
               <ProgressBar x:Name="ProgressoBrinca"
-                           ProgressColor="#303332"
+                           ProgressColor="#ffffff"
                            Width="100"
                            Height="20"
                            Grid.Row="2"
@@ -93,7 +96,7 @@
        </Frame>     
 
 
-       <Frame    BackgroundColor="#3a3eba"
+       <Frame    BackgroundColor="#93c9c9"
                  CornerRadius="20"
                  Padding="5"
                  BorderColor="Black"
@@ -112,22 +115,25 @@
 </Grid.ColumnDefinitions>                  
 
        <ImageButton Source="pizza.png"
-                    BackgroundColor="#3a3eba"
+                    Clicked="AumentaFome" 
+                    BackgroundColor="#93c9c9"
                     Grid.Column="0"
                     Grid.Row="0"/>
 
        <ImageButton Source="agua.png"
-                     BackgroundColor="#3a3eba"
+                    Clicked="AumentaSede"
+                    BackgroundColor="#93c9c9"
                     Grid.Column="1"
                     Grid.Row="0"/>
 
        <ImageButton Source="bola.png"
-                     BackgroundColor="#3a3eba"
+                    Clicked="AumentaBrinca"
+                    BackgroundColor="#93c9c9"
                     Grid.Column="2"
                     Grid.Row="0"/>
 
        <ImageButton Source="seta.png"
-                     BackgroundColor="#3a3eba"
+                    BackgroundColor="#93c9c9"
                     Clicked="TrocaPersonagem"
                     Grid.Column="3"
                     Grid.Row="0"/>

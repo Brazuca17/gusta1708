@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Maui.Controls;
 
 namespace gusta1708;
 
@@ -22,24 +23,30 @@ public partial class MainPage : ContentPage
 
         atual = josefina;
 
-		Imgdosbicho.Source = atual.GetNomedafoto();
-
-        ProgressoFome.Progress = atual.GetFome();
-
-		ProgressoSede.Progress = atual.GetSede();
-
-		ProgressoBrinca.Progress = atual.GetBrinca();
-
-		
-
 	    Fundo.Add("praia.png");
 
 		Fundo.Add("europa.png");
 	
 		imgfundo.Source = Fundo[0];
+
+		Imgdosbicho.Source = atual.GetNomedafoto();
+
+		var timer = Application.Current.Dispatcher.CreateTimer();
+		timer.Interval = TimeSpan.FromSeconds(3);
+		timer.Tick += (s,e) => 
+		PassouTempo(); 
+		timer.Start();
 	}
 
  //------------------------------------------------------------------------------------------------
+
+	void AtualizaPersonagem()
+	{
+		
+        ProgressoFome.Progress = atual.GetFome();
+		ProgressoSede.Progress = atual.GetSede();
+		ProgressoBrinca.Progress = atual.GetBrinca();
+	}
 
      void TrocaPersonagem(object sender, EventArgs args)
 	{
@@ -55,24 +62,24 @@ public partial class MainPage : ContentPage
 	   {
 		 atual = josefina;
 	   }
+	   Imgdosbicho.Source = atual.GetNomedafoto();
+	   AtualizaPersonagem();
 	}
 
  //------------------------------------------------------------------------------------------------
   
   void AumentaFome(object sender, EventArgs args)
    {
-      atual.SetFome(atual.GetFome() + 0.1);
- 
-      ProgressoFome.Progress = atual.GetFome();
+      	atual.SetFome(atual.GetFome() + 0.1);
+		AtualizaPersonagem();
    }
    
     
 //------------------------------------------------------------------------------------------------
   void AumentaSede(object sender, EventArgs args)
   {
-      atual.SetSede(atual.GetSede() + 0.1);
-
-      ProgressoSede.Progress = atual.GetSede();
+      	atual.SetSede(atual.GetSede() + 0.1);
+		AtualizaPersonagem();
   }
   
 
@@ -81,9 +88,18 @@ public partial class MainPage : ContentPage
     void AumentaBrinca(object sender, EventArgs args)
     {
         atual.SetBrinca(atual.GetBrinca() + 0.1);
-
-        ProgressoBrinca.Progress = atual.GetBrinca();
+		AtualizaPersonagem();
     }
+
+//------------------------------------------------------------------------------------------------
+
+	void PassouTempo()
+	{
+		atual.SetFome(atual.GetFome() - 0.1);
+ 		atual.SetSede(atual.GetSede() - 0.1);
+        atual.SetSede(atual.GetSede() - 0.1);
+		AtualizaPersonagem();
+	}
 
 
 }
