@@ -47,6 +47,8 @@ public partial class MainPage : ContentPage
 		ProgressoBrinca.Progress = atual.GetBrinca();
 	}
 
+//------------------------------------------------------------------------------------------------
+
     void TrocaPersonagem(object sender, EventArgs args)
 	{
 	   if(atual == josefina)
@@ -102,17 +104,7 @@ public partial class MainPage : ContentPage
 
 //------------------------------------------------------------------------------------------------
 
-	void TrocaFundo()
-	{
-      if(imgfundo == 0)
-	  {
-        imgfundo = 1;
-	  }
-      else if(imgfundo == 1)
-	  {
-        imgfundo = 0
-	  } 
-	}
 
+//------------------------------------------------------------------------------------------------
 }
 

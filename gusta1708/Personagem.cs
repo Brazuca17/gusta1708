@@ -10,12 +10,8 @@ public double Brinca;
 
 protected string Nomedafoto;
 
-public Personagem()
-{
-    Nomedafoto="nada";
-}
 
- 
+
 public string GetNomedafoto()
 {
     return Nomedafoto;
