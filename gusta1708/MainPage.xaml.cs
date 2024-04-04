@@ -32,7 +32,7 @@ public partial class MainPage : ContentPage
 		Imgdosbicho.Source = atual.GetNomedafoto();
 
 		var timer = Application.Current.Dispatcher.CreateTimer();
-		timer.Interval = TimeSpan.FromSeconds(3);
+		timer.Interval = TimeSpan.FromSeconds(5);
 		timer.Tick += (s,e) => 
 		PassouTempo(); 
 		timer.Start();
@@ -42,13 +42,12 @@ public partial class MainPage : ContentPage
 
 	void AtualizaPersonagem()
 	{
-		
         ProgressoFome.Progress = atual.GetFome();
 		ProgressoSede.Progress = atual.GetSede();
 		ProgressoBrinca.Progress = atual.GetBrinca();
 	}
 
-     void TrocaPersonagem(object sender, EventArgs args)
+    void TrocaPersonagem(object sender, EventArgs args)
 	{
 	   if(atual == josefina)
 	   { 
@@ -68,19 +67,19 @@ public partial class MainPage : ContentPage
 
  //------------------------------------------------------------------------------------------------
   
-  void AumentaFome(object sender, EventArgs args)
-   {
+  	void AumentaFome(object sender, EventArgs args)
+   	{
       	atual.SetFome(atual.GetFome() + 0.1);
 		AtualizaPersonagem();
-   }
+   	}
    
     
 //------------------------------------------------------------------------------------------------
-  void AumentaSede(object sender, EventArgs args)
-  {
+  	void AumentaSede(object sender, EventArgs args)
+  	{
       	atual.SetSede(atual.GetSede() + 0.1);
 		AtualizaPersonagem();
-  }
+  	}
   
 
  //------------------------------------------------------------------------------------------------
@@ -101,6 +100,19 @@ public partial class MainPage : ContentPage
 		AtualizaPersonagem();
 	}
 
+//------------------------------------------------------------------------------------------------
+
+	void TrocaFundo()
+	{
+      if(imgfundo == 0)
+	  {
+        imgfundo = 1;
+	  }
+      else if(imgfundo == 1)
+	  {
+        imgfundo = 0
+	  } 
+	}
 
 }
 

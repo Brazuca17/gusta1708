@@ -4,33 +4,26 @@
              x:Class="gusta1708.MainPage"
              Shell.NavBarIsVisible="False">
 
-    <Grid>
+       <Grid>
        <Grid.RowDefinitions>
-          <RowDefinition Height="50"/> <!-- primeira linha  -->
-          <RowDefinition Height="70"/> <!-- segunda linha  -->
-          <RowDefinition Height="70"/> <!-- terceira linha  -->
-          <RowDefinition Height="*"/> <!-- quarta linha  -->
-          <RowDefinition Height="50"/> <!--  quinta linha  -->
-          <RowDefinition Height="20"/> <!-- sexta linha  -->
+        <RowDefinition Height="70"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="30"/>
        </Grid.RowDefinitions>
 
-       <Grid.ColumnDefinitions>
-          <ColumnDefinition Width="*"/> <!-- pirmeira coluna  -->
-          <ColumnDefinition Width="*"/> <!-- segunda coluna   -->
-          <ColumnDefinition Width="*"/> <!-- terceira coluna  -->
-          <ColumnDefinition Width="*"/> <!-- quarta coluna -->
-          <ColumnDefinition Width="*"/> <!-- quinta coluna  -->
-       </Grid.ColumnDefinitions>
 
        <Image x:Name="imgfundo"
               Aspect="AspectFill"
-              Grid.RowSpan="6"
-              Grid.ColumnSpan="5"/>
+              Grid.RowSpan="6"/>
               
-
        <Image x:Name="Imgdosbicho"
-              Grid.RowSpan="6"
-              Grid.ColumnSpan="5"/>
+              Grid.RowSpan="6"/>
+
+       <ImageButton Source="seta.png"
+                    Clicked="TrocaFundo"
+                    BackgroundColor="#93c9c9"
+                    Grid.Row="2"/>
+
   
        <Frame    BackgroundColor="#93c9c9"
                  Opacity=".6"
@@ -38,11 +31,11 @@
                  HeightRequest="160"
                  WidthRequest="450"
                  BorderColor="Black"
-                 Grid.ColumnSpan="5"
                  Grid.Row="0"
                  Grid.RowSpan="3">
-<Grid>
-<Grid.RowDefinitions>
+
+       <Grid>
+       <Grid.RowDefinitions>
           <RowDefinition Height="40"/> 
           <RowDefinition Height="40"/> 
           <RowDefinition Height="40"/> 
@@ -51,50 +44,48 @@
        <Grid.ColumnDefinitions>
           <ColumnDefinition Width="40"/> 
           <ColumnDefinition Width="*"/> 
-</Grid.ColumnDefinitions> 
+       </Grid.ColumnDefinitions> 
                
 
                  
 
-              <Image Source="pizza.png"
-                     Grid.Row="0"
-                     Grid.Column="0"/>
+       <Image Source="pizza.png"
+              Grid.Row="0"
+              Grid.Column="0"/>
 
-              <Image Source="agua.png"
-                     Grid.Row="1"
-                     Grid.Column="0"/>
+       <Image Source="agua.png"
+              Grid.Row="1"
+              Grid.Column="0"/>
 
-               <Image Source="bola.png"
-                      Grid.Row="2"
-                      Grid.Column="0"/>
+       <Image Source="bola.png"
+              Grid.Row="2"
+              Grid.Column="0"/>
                             
-              <ProgressBar x:Name="ProgressoFome"
-                           ProgressColor="#d13646"
-                           Width="100"
-                           Height="20"
-                           Grid.Row="0"
-                           Grid.Column="1"
-                           Grid.ColumnSpan="4"/>
+       <ProgressBar  x:Name="ProgressoFome"
+                     ProgressColor="#d13646"
+                     Width="100"
+                     Height="20"
+                     Grid.Row="0"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="4"/>
 
-              <ProgressBar x:Name="ProgressoSede"
-                           ProgressColor="#42ddfc"
-                           Width="100"
-                           Height="20"
-                           Grid.Row="1"
-                           Grid.Column="1"
-                           Grid.ColumnSpan="4"/>
+       <ProgressBar  x:Name="ProgressoSede"
+                     ProgressColor="#42ddfc"
+                     Width="100"
+                     Height="20"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="4"/>
 
-              <ProgressBar x:Name="ProgressoBrinca"
-                           ProgressColor="#ffffff"
-                           Width="100"
-                           Height="20"
-                           Grid.Row="2"
-                           Grid.Column="1"
-                           Grid.ColumnSpan="4"/>   
-</Grid>        
-
+       <ProgressBar  x:Name="ProgressoBrinca"
+                     ProgressColor="#ffffff"
+                     Width="100"
+                     Height="20"
+                     Grid.Row="2"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="4"/>   
+       </Grid>        
        </Frame>     
-
 
        <Frame    BackgroundColor="#93c9c9"
                  CornerRadius="20"
@@ -105,14 +96,13 @@
                  Grid.ColumnSpan="3">
 
 
-<Grid>
-
-<Grid.ColumnDefinitions>
+       <Grid>
+       <Grid.ColumnDefinitions>
           <ColumnDefinition Width="*"/> 
           <ColumnDefinition Width="*"/> 
           <ColumnDefinition Width="*"/> 
           <ColumnDefinition Width="*"/> 
-</Grid.ColumnDefinitions>                  
+       </Grid.ColumnDefinitions>                  
 
        <ImageButton Source="pizza.png"
                     Clicked="AumentaFome" 
@@ -138,13 +128,9 @@
                     Grid.Column="3"
                     Grid.Row="0"/>
 
-</Grid> 
-       </Frame>  
+       </Grid> 
+       </Frame>
 
                
-
-                       
-
-                       
-         </Grid>
+       </Grid>
 </ContentPage>
