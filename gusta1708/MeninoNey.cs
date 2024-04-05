@@ -9,6 +9,7 @@ public MeninoNey() : base()
     Fome = 1;
     Sede = 1;
     Brinca = 1;
+    Morto="neymarmorto.png";
 }
 
 

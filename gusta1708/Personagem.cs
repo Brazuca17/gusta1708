@@ -10,13 +10,24 @@ public double Brinca;
 
 protected string Nomedafoto;
 
+public bool Morto;
+
+public string NomedafotoMorto;
+
 
 
 public string GetNomedafoto()
-{
+{   
+  if(Morto)
+     return NomedafotoMorto;
+  else
     return Nomedafoto;
 }
 
+public string GetImageMrto()
+{
+    return ImageMorto;
+}
 
 public void SetFome(double F)
 {
@@ -28,7 +39,6 @@ public double GetFome()
     return Fome;
 }
  
-
 public void SetSede(double S)
 {
     Sede=S;
