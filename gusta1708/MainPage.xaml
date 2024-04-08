@@ -29,7 +29,8 @@
               Grid.ColumnSpan="3"/>
 
        <ImageButton Source="seta.png"
-                    
+                    Clicked="TrocaFundo"
+                    CornerRadius="30"
                     BackgroundColor="#93c9c9"
                     Grid.Row="3"
                     Grid.Column="2"/>
@@ -88,7 +89,7 @@
                      Grid.ColumnSpan="4"/>
 
        <ProgressBar  x:Name="ProgressoBrinca"
-                     ProgressColor="#ffffff"
+                     ProgressColor="#ffff"
                      Width="100"
                      Height="20"
                      Grid.Row="2"

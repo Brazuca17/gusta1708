@@ -14,6 +14,8 @@ public partial class MainPage : ContentPage
 	MeninoNey neymar = new MeninoNey();
 
 	List<String> Fundo = new List<String>();
+
+	int Indicefundoatual = 0;
 	
 
 
@@ -26,19 +28,22 @@ public partial class MainPage : ContentPage
 	    Fundo.Add("praia.png");
 
 		Fundo.Add("europa.png");
-	
-		imgfundo.Source = Fundo[0];
+
+		imgfundo.Source = Fundo[Indicefundoatual];
 
 		Imgdosbicho.Source = atual.GetNomedafoto();
 
+		AtualizaPersonagem();
+
 		var timer = Application.Current.Dispatcher.CreateTimer();
-		timer.Interval = TimeSpan.FromSeconds(5);
+		timer.Interval = TimeSpan.FromSeconds(100);
 		timer.Tick += (s,e) => 
 		PassouTempo(); 
 		timer.Start();
 	}
 
  //------------------------------------------------------------------------------------------------
+
 
 	void AtualizaPersonagem()
 	{
@@ -96,20 +101,29 @@ public partial class MainPage : ContentPage
 
 	void PassouTempo()
 	{
+		var comoAtualEstava = atual.Morto;
 		atual.SetFome(atual.GetFome() - 0.1);
  		atual.SetSede(atual.GetSede() - 0.1);
-        atual.SetSede(atual.GetSede() - 0.1);
+        atual.SetBrinca(atual.GetBrinca() - 0.1);
 		AtualizaPersonagem();
+		if (comoAtualEstava != atual.Morto)
+			Imgdosbicho.Source = atual.GetNomedafoto();
 	}
 
 //------------------------------------------------------------------------------------------------
-    void Morto()
+
+    void  TrocaFundo(object sender, EventArgs args)
+ {
+	if(Indicefundoatual == 1)
 	{
-	
-
-
+		Indicefundoatual = 0;
 	}
+	else if(Indicefundoatual == 0)
+	{
+		Indicefundoatual = 1;
+	}
+	imgfundo.Source = Fundo[Indicefundoatual];
+ }
 
-//------------------------------------------------------------------------------------------------
 }
 

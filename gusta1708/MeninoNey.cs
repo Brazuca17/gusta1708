@@ -5,11 +5,11 @@ public class MeninoNey:Personagem
 
 public MeninoNey() : base()
 {
-    Nomedafoto="neymar.png";
+    Nomedafotovivo="neymar.png";
+    Nomedafotomorto="neymarmorto.png";
     Fome = 1;
     Sede = 1;
     Brinca = 1;
-    Morto="neymarmorto.png";
 }
 
 

@@ -8,30 +8,30 @@ public double Sede;
 
 public double Brinca;
 
-protected string Nomedafoto;
+protected string Nomedafotovivo;
+
+protected string Nomedafotomorto;
 
 public bool Morto;
 
-public string NomedafotoMorto;
 
-
-
-public string GetNomedafoto()
-{   
-  if(Morto)
-     return NomedafotoMorto;
-  else
-    return Nomedafoto;
+public void SetMorto(bool M)
+{ 
+  Morto=M;
 }
 
-public string GetImageMrto()
+public bool GetMorto()
 {
-    return ImageMorto;
+  return Morto;
 }
 
 public void SetFome(double F)
 {
   Fome=F;
+  if(Fome <= 0)
+  {
+    Morto=true;
+  }
 }
 
 public double GetFome()
@@ -42,6 +42,10 @@ public double GetFome()
 public void SetSede(double S)
 {
     Sede=S;
+    if(Sede <= 0 )
+    {
+      Morto=true;
+    }
 }
 
 public double GetSede()
@@ -57,12 +61,21 @@ public double GetBrinca()
 public void SetBrinca(double B)
 {
     Brinca=B;
+    if(Brinca <= 0)
+    {
+      Morto=true;
+    }
 }
 
+public string GetNomedafoto()
+{
+  if(Morto)
+  return Nomedafotomorto;
+  else 
+  return Nomedafotovivo;
+}
 
  
-
-
 }
 
 
