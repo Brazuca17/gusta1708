@@ -125,5 +125,13 @@ public partial class MainPage : ContentPage
 	imgfundo.Source = Fundo[Indicefundoatual];
  }
 
+  void GameOver()
+  {
+	if (atual.SetFome(atual.GetFome() == 0);
+ 		atual.SetSede(atual.GetSede() == 0);
+        atual.SetBrinca(atual.GetBrinca() == 0);)
+	 	Application.Current.MainPage = new GamePage();
+  	
+
 }
 

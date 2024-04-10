@@ -12,6 +12,4 @@ public MeninoNey() : base()
     Brinca = 1;
 }
 
-
-
 }
