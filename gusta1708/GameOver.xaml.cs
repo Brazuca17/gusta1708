@@ -7,14 +7,13 @@ public partial class GameOver : ContentPage
     {
         InitializeComponent();
 
-        private void VoltarMenu(object sender, EventArgs args)
-        {
-        if (Application.Current != null)
-        Application.Current.MainPage = new MainPage();
-        } 
-
-
 
     }
+
+    void VoltarMenu(object sender, EventArgs args)
+    {
+        if (Application.Current != null)
+        Application.Current.MainPage = new MainPage();
+    } 
 }
 

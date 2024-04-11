@@ -17,7 +17,7 @@ public partial class MainPage : ContentPage
 
 	int Indicefundoatual = 0;
 	
-
+ Alana Linda
 
 	public MainPage()
 	{
@@ -36,7 +36,7 @@ public partial class MainPage : ContentPage
 		AtualizaPersonagem();
 
 		var timer = Application.Current.Dispatcher.CreateTimer();
-		timer.Interval = TimeSpan.FromSeconds(100);
+		timer.Interval = TimeSpan.FromSeconds(1);
 		timer.Tick += (s,e) => 
 		PassouTempo(); 
 		timer.Start();
@@ -108,6 +108,12 @@ public partial class MainPage : ContentPage
 		AtualizaPersonagem();
 		if (comoAtualEstava != atual.Morto)
 			Imgdosbicho.Source = atual.GetNomedafoto();
+		if(neymar.GetImageMorto() &&
+		   bicho.GetImageMorto() &&
+		   josefina.GetImageMorto())
+		   {
+		   Application.Current.MainPage = new GameOver();
+		   }
 	}
 
 //------------------------------------------------------------------------------------------------
@@ -124,14 +130,5 @@ public partial class MainPage : ContentPage
 	}
 	imgfundo.Source = Fundo[Indicefundoatual];
  }
-
-  void GameOver()
-  {
-	if (atual.SetFome(atual.GetFome() == 0);
- 		atual.SetSede(atual.GetSede() == 0);
-        atual.SetBrinca(atual.GetBrinca() == 0);)
-	 	Application.Current.MainPage = new GamePage();
-  	
-
 }
 

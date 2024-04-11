@@ -20,14 +20,14 @@ public bool Morto;
 public string GetNomedafoto()
 {   
   if(Morto)
-     return NomedafotoMorto;
+     return Nomedafotomorto;
   else
-    return Nomedafoto;
+    return Nomedafotovivo;
 }
 
 //------------------------------------------------------------------------------------------------
 
-public string GetImageMorto()
+public bool GetImageMorto()
 {
   return Morto;
 }
@@ -79,25 +79,8 @@ public void SetBrinca(double B)
       Morto=true;
     }
 }
+}
 
-<<<<<<< HEAD
-//------------------------------------------------------------------------------------------------
-=======
-public string GetNomedafoto()
-{
-  if(Morto)
-  return Nomedafotomorto;
-  else 
-  return Nomedafotovivo;
-}
->>>>>>> 278e7daf182ad8201cd53802b2d31871c0ac8e21
-
-<<<<<<< HEAD
-=======
- 
->>>>>>> 278e7daf182ad8201cd53802b2d31871c0ac8e21
-}
-}
 
 
 
