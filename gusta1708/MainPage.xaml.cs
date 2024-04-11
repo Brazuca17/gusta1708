@@ -16,8 +16,6 @@ public partial class MainPage : ContentPage
 	List<String> Fundo = new List<String>();
 
 	int Indicefundoatual = 0;
-	
- Alana Linda
 
 	public MainPage()
 	{
